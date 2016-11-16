@@ -1,0 +1,22 @@
+{
+  "name": "hedou",
+  "version": "0.0.1",
+  "description": "hedou front end --hedou education",
+  "anthor": "chiji",
+  "license": "ISC",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack",
+    "dev": "./node_modules/.bin/webpack-dev-server"
+  },
+  "devDependencies": {
+    "css-loader": "^0.25.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "jquery": "1.11.3",
+    "json-loader": "^0.5.4",
+    "node-sass": "^3.13.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
