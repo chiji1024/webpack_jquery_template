@@ -11,7 +11,7 @@ var state = 'develop';
 
 
 var extractCss = state !== 'develop'
-    ? new ExtractText('css/[name]_[hash].css') : new ExtractText('css/[name].css');
+    ? new ExtractText('css/[name]_[hash].css') : new ExtractText('css_develop/[name].css');
 var jqueryPlugin = new webpack.ProvidePlugin({
     $:'jquery',
     jquery: 'jquery'
@@ -29,7 +29,7 @@ module.exports = {
     },
     output: {
         path: './dist',
-        filename: (state !== 'develop') ? 'js/[name]_[hash].js' :'js/[name].js'
+        filename: (state !== 'develop') ? 'js/[name]_[hash].js' :'js_develop/[name].js'
     },
     module: {
         loaders: [
