@@ -6,7 +6,7 @@
   "license": "ISC",
   "scripts": {
     "build": "./node_modules/.bin/webpack",
-    "dev": "./node_modules/.bin/webpack-dev-server"
+    "dev": "./node_modules/.bin/webpack-dev-server --hot"
   },
   "devDependencies": {
     "css-loader": "^0.25.0",
