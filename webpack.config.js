@@ -9,13 +9,17 @@ var autoprefixer = require('autoprefixer');
 //develop or production
 var state = 'develop';
 
-
+//extract css into file
 var extractCss = state !== 'develop'
     ? new ExtractText('css/[name]_[hash].css') : new ExtractText('css_develop/[name].css');
+
+//provide jquery environment
 var jqueryPlugin = new webpack.ProvidePlugin({
     $:'jquery',
     jquery: 'jquery'
 });
+
+//compress file
 var uglifyJS = new webpack.optimize.UglifyJsPlugin({
     compress: {
         warnings: false
@@ -47,13 +51,13 @@ module.exports = {
             }
         ],
     },
-    devServer: {
+    /*devServer: {
         contentBase: "./dist",//本地服务器所加载的页面所在的目录
         port: 8080,//default 8080
         colors: true,//终端中输出结果为彩色
         historyApiFallback: true,//不跳转
         inline: true//实时刷新
-    },
+    },*/
     plugins: [
         extractCss,
         jqueryPlugin
